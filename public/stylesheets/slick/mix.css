@@ -73,7 +73,7 @@
 }
 
 .artworkarea {
-    background-image: url("http://localhost:3000/resources/test2.png");
+    background-image: url("http://softlyspoken.herokuapp.com/resources/test2.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
