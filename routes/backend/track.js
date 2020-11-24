@@ -6,7 +6,7 @@ const app = express();
 //const Music = require('../models/music')
 //const Music = require('../models/music')
 //const User = require('../models/user')
-// const auth = require('../../middleware/auth')
+const auth = require('../../middleware/auth')
 const router = new express.Router()
 const mongoose = require('mongoose');
 const Track = require('../../models/track');
@@ -48,7 +48,7 @@ router.get('/tracks/:trackID', (req, res) => {
 /**
  * POST /tracks
  */
-router.post('/tracks', async (req, res) => {
+router.post('/tracks',auth, async (req, res) => {
   const storage = multer.memoryStorage()
   const upload = multer({ storage: storage, limits: { fields: 1, fileSize: 90000000, files: 1, parts: 2 }});
   upload.single('track')(req, res, (err) => {

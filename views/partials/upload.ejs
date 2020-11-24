@@ -21,11 +21,11 @@
                 <label for="tile"></label>
                 <input type="text" class="inputTitle" id="title" name="name" placeholder="title*" value="" required />
             </li>
-            <li>
+            <!-- <li>
                 <label for="description"></label>
-                <input type="text" name="description" class="description" id="description" cols="30" rows="10"
-                    placeholder="description*"></textarea>
-            </li>
+                <textarea name="description" class="description" id="description" cols="30" rows="10"
+                    placeholder="description*" required></textarea>
+            </li> -->
 
             <div class="imgToUpload">
                 <div>
@@ -37,14 +37,12 @@
                 </div>
 
                 <label for="choose your tag">Choose your tag:</label>
-                <input type="radio" name="category" id="choosetag" class="choosetag">
-                <label for="study">STUDY</label><br>
-                <input type="radio" name="category" id="choosetag" class="choosetag">
-                <label value="love">LOVE</label><br>
-                <input type="radio" name="category" id="choosetag" class="choosetag">
-                <label value="entertainment">ENTERTAINMENT</label><br>
-                <input type="radio" name="category" id="choosetag" class="choosetag">
-                <label value="health">HEALTH</label><br>
+                <select name="category" id="choosetag" class="choosetag" style="color: black;">
+                    <option valuey="study">STUDY</option>
+                    <option value="love">LOVE</option>
+                    <option value="entertainment">ENTERTAINMENT</option>
+                    <option value="health">HEALTH</option>
+                </select>
 
             </div>
             <li id="center-btn">
